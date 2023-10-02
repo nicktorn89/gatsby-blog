@@ -12,7 +12,7 @@ module.exports = {
     title: `Tech Blog`,
     author: {
       name: `Vladislav Komanchy`,
-      summary: `Software engineer with love to software`,
+      summary: `Software developer`,
     },
     description: `This blog will cover tech issues and features`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,

@@ -18,16 +18,12 @@ const Bio = () => {
             name
             summary
           }
-          social {
-            twitter
-          }
         }
       }
     }
   `)
 
   const author = data.site.siteMetadata?.author;
-  const social = data.site.siteMetadata?.social;
 
   return (
     <div className="bio">
@@ -42,21 +38,15 @@ const Bio = () => {
         alt="Profile picture"
       />
       {author?.name && (
-        <>
+        <div className='bio-text'>
           <p>
             Written by <strong>{author.name}</strong>
           </p>
           <p>{author?.summary || null}</p>
-          <p>
-            {` `}
-            <a href={`https://twitter.com/${social?.twitter || ``}`}>
-              You should follow them on Twitter
-            </a>
-          </p>
-        </>
+        </div>
       )}
     </div>
   )
 }
 
-export default Bio
+export default Bio;
