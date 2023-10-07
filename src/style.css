@@ -85,6 +85,16 @@ footer {
   padding: var(--spacing-6) var(--spacing-0);
 }
 
+.social-block {
+  margin-top: 8px;
+
+  display: flex;
+}
+
+.social-link {
+  margin: 0 8px;
+}
+
 hr {
   background: var(--color-accent);
   height: 1px;
