@@ -17,7 +17,13 @@ module.exports = {
     description: `This blog will cover tech issues and features`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
-      twitter: `kylemathews`,
+      codeberg: {
+        link: 'https://codeberg.org/vkomanchy',
+        username: 'vkomanchy'
+      },
+      telegram: {
+        link: 'https://t.me/rickdeck'
+      }
     },
   },
   plugins: [

@@ -1,7 +1,27 @@
 import * as React from 'react';
-import { Link } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 
 const Layout = ({ location, title, children }) => {
+  const data = useStaticQuery(graphql`
+    query SocialQuery {
+      site {
+        siteMetadata {
+          social {
+            codeberg {
+              link
+            }
+            telegram {
+              link
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const codebergLink = data.site.siteMetadata?.social.codeberg.link;
+  const telegramLink = data.site.siteMetadata?.social.telegram.link;
+
   const rootPath = `${__PATH_PREFIX__}/`;
   const isRootPath = location.pathname === rootPath;
   let header;
@@ -25,9 +45,18 @@ const Layout = ({ location, title, children }) => {
       <header className='global-header'>{header}</header>
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href='https://www.gatsbyjs.com'>Gatsby</a>
+        <div className='gatsby-block'>
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href='https://www.gatsbyjs.com'>Gatsby</a>
+        </div>
+
+        <div className='social-block'>
+          <p className='social-text'>Social:</p>
+
+          <a className='social-link' href={codebergLink}>Codeberg</a>
+          <a className='social-link' href={telegramLink}>Telegram</a>
+        </div>
       </footer>
     </div>
   );
