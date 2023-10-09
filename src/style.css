@@ -332,6 +332,15 @@ a:focus {
   margin-bottom: var(--spacing-8);
 }
 
+.read-time {
+  display: flex;
+}
+
+.read-time p {
+  margin-right: 8px;
+  font-style: italic;
+}
+
 /* Media queries */
 
 @media (max-width: 42rem) {
