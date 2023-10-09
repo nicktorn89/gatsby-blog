@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby';
 import Bio from '../components/bio';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
+import { ReadTime } from '../components/readTime';
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
@@ -22,10 +23,14 @@ const BlogPostTemplate = ({
           <h1 itemProp='headline'>{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
         </header>
+
+        <ReadTime postHtml={post.html} />
+
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp='articleBody'
         />
+
         <hr />
         <footer>
           <Bio />
