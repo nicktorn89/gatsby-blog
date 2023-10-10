@@ -120,7 +120,7 @@ module.exports = {
         short_name: `Tech blog`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#005b99`,
         display: `minimal-ui`,
         icon: `src/images/site-icon.png`, // This path is relative to the root of the site.
       },
