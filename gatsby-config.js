@@ -4,26 +4,28 @@
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
  */
 
+const siteUrl = 'https://vkomanchy.me';
+
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
   siteMetadata: {
     title: `Tech Blog`,
+    siteUrl,
     author: {
       name: `Vladislav Komanchy`,
       summary: `Software developer`,
     },
     description: `This blog will cover tech issues and features`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
       codeberg: {
         link: 'https://codeberg.org/vkomanchy',
-        username: 'vkomanchy'
+        username: 'vkomanchy',
       },
       telegram: {
-        link: 'https://t.me/rickdeck'
-      }
+        link: 'https://t.me/rickdeck',
+      },
     },
   },
   plugins: [
@@ -125,5 +127,8 @@ module.exports = {
         icon: `src/images/site-icon.png`, // This path is relative to the root of the site.
       },
     },
+    'gatsby-plugin-robots-txt',
+    // FIXME: Implement normal sitemap
+    'gatsby-plugin-sitemap',
   ],
 };
