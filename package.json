@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "gatsby-blog",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Tech blog by Vladislav Komanchy",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Vladislav Komanchy <vkomanchy@gmail.com>",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
@@ -14,7 +14,9 @@
     "gatsby-plugin-feed": "^5.12.0",
     "gatsby-plugin-image": "^3.12.0",
     "gatsby-plugin-manifest": "^5.12.0",
+    "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sharp": "^5.12.0",
+    "gatsby-plugin-sitemap": "^6.12.1",
     "gatsby-remark-images": "^7.12.0",
     "gatsby-remark-prismjs": "^7.12.0",
     "gatsby-remark-responsive-iframe": "^6.12.0",
