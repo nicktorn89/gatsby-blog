@@ -54,6 +54,8 @@
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
 
+  --background-color: #1c1c1c;
+
   --color-primary: #005b99;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
@@ -73,6 +75,9 @@
 html {
   line-height: var(--lineHeight-normal);
   font-size: var(--fontSize-root);
+
+  background-color: var(--background-color);
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -344,10 +349,12 @@ a:focus {
 }
 
 .theme-toggle-container {
-  position: sticky;
+  position: absolute;
 
-  left: 50px;
-  top: 50px;
+  left: 25px;
+  top: 25px;
+
+  cursor: pointer;
 }
 
 /* Media queries */
