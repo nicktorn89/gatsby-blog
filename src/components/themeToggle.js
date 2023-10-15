@@ -6,11 +6,15 @@ import { ThemeContext } from '../context/ThemeContext';
 import { useContext } from 'react';
 
 export const ThemeToggle = () => {
-  const { theme, changeTheme } = useContext(ThemeContext);
-
   const handleChangeTheme = () => {
     changeTheme(theme === 'light' ? 'dark' : 'light');
   };
+  
+  const themeData = useContext(ThemeContext);
+  
+  if (!themeData) return null;
+
+  const { theme, changeTheme } = themeData;
 
   const CurrentIcon = theme === 'dark' ? HiOutlineMoon : HiOutlineLightBulb;
 
