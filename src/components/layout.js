@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
+import { ThemeToggle } from './themeToggle';
 
 const Layout = ({ location, title, children }) => {
   const data = useStaticQuery(graphql`
@@ -43,6 +44,8 @@ const Layout = ({ location, title, children }) => {
   return (
     <div className='global-wrapper' data-is-root-path={isRootPath}>
       <header className='global-header'>{header}</header>
+
+      <ThemeToggle />
 
       <main>{children}</main>
 
