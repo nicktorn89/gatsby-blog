@@ -1,4 +1,23 @@
-export const changeTheme = (theme) => {
+export const getColorMode = () => {
+  const savedColorMode = window.localStorage.getItem('colorMode');
+  const isColorModeSaved = typeof savedColorMode === 'string';
+
+  if (isColorModeSaved) {
+    return savedColorMode;
+  }
+
+  const prefersColorsScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+  const isPreferenceDefined = typeof prefersColorsScheme?.matches === 'boolean';
+
+  if (isPreferenceDefined) {
+    return prefersColorsScheme.matches ? 'dark' : 'light';
+  }
+
+  return 'light';
+};
+
+export const changeCssVariablesByTheme = (theme) => {
   const cssPropertiesByTheme = {
     dark: {
       '--background-color': '#1c1c1c',

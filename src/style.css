@@ -351,7 +351,7 @@ a:focus {
 .theme-toggle-container {
   position: absolute;
 
-  left: 25px;
+  right: 25px;
   top: 25px;
 
   cursor: pointer;
