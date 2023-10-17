@@ -2,7 +2,7 @@ import React from 'react';
 
 import { HiOutlineMoon, HiOutlineLightBulb } from 'react-icons/hi';
 
-import { ThemeContext } from '../context/ThemeContext';
+import { ThemeContext } from '../../context/ThemeContext';
 import { useContext } from 'react';
 
 export const ThemeToggle = () => {

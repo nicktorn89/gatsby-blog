@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
-import { ThemeToggle } from './themeToggle';
+import { ThemeToggle } from '../ThemeToggle/ThemeToggle';
 
 const Layout = ({ location, title, children }) => {
   const data = useStaticQuery(graphql`

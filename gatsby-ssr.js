@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 const React = require('react');
-const { ThemeSettler } = require('./src/components/themeSettler');
+const { ThemeSettler } = require('./src/components/ThemeSettler/ThemeSettler');
 
 /**
  * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.

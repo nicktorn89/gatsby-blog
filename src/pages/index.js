@@ -2,9 +2,9 @@
 import * as React from 'react';
 import { Link, graphql } from 'gatsby';
 
-import Bio from '../components/bio';
-import Layout from '../components/layout';
-import Seo from '../components/seo';
+import Bio from '../components/Bio/Bio';
+import Layout from '../components/Layout/Layout';
+import Seo from '../components/Seo/Seo';
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
