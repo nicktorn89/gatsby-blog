@@ -1,9 +1,6 @@
 /* eslint-disable no-undef */
 const React = require('react');
 const { ThemeSettler } = require('./src/components/ThemeSettler/ThemeSettler');
-const {
-  FallbackStyles,
-} = require('./src/components/FallbackStyles/FallbackStyles');
 
 /**
  * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
@@ -14,12 +11,7 @@ const {
 /**
  * @type {import('gatsby').GatsbySSR['onRenderBody']}
  */
-exports.onRenderBody = ({
-  setHtmlAttributes,
-  setHeadComponents,
-  setPreBodyComponents,
-}) => {
-  setHeadComponents(<FallbackStyles />);
+exports.onRenderBody = ({ setHtmlAttributes, setPreBodyComponents }) => {
   setPreBodyComponents(<ThemeSettler />);
   setHtmlAttributes({ lang: `en` });
 };
