@@ -42,4 +42,6 @@ export const changeCssVariablesByTheme = (theme) => {
   Object.entries(currentProperties).forEach(([key, value]) => {
     document.documentElement.style.setProperty(key, value);
   });
+
+  document.documentElement.style.transition = `background-color 0.5s ease-out`;
 };
