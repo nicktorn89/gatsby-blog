@@ -99,6 +99,10 @@ footer {
   display: flex;
 }
 
+.social-divider {
+  margin-right: 8px;
+}
+
 .social-link {
   margin: 0 8px;
 }

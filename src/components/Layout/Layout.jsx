@@ -7,6 +7,7 @@ const Layout = ({ location, title, children }) => {
     query SocialQuery {
       site {
         siteMetadata {
+          siteUrl
           social {
             codeberg {
               link
@@ -19,6 +20,9 @@ const Layout = ({ location, title, children }) => {
       }
     }
   `);
+
+  const siteUrl = data.site.siteMetadata?.siteUrl;
+  const rssLink = `${siteUrl}/rss.xml`;
 
   const codebergLink = data.site.siteMetadata?.social.codeberg.link;
   const telegramLink = data.site.siteMetadata?.social.telegram.link;
@@ -57,10 +61,23 @@ const Layout = ({ location, title, children }) => {
         </div>
 
         <div className='social-block'>
+          <p>
+            Subscribe with 
+            <a className='social-link' href={rssLink}>
+              RSS
+            </a>
+          </p>
+
+          <p className='social-divider'>|</p>
+
           <p className='social-text'>Social:</p>
 
-          <a className='social-link' href={codebergLink}>Codeberg</a>
-          <a className='social-link' href={telegramLink}>Telegram</a>
+          <a className='social-link' href={codebergLink}>
+            Codeberg
+          </a>
+          <a className='social-link' href={telegramLink}>
+            Telegram
+          </a>
         </div>
       </footer>
     </div>
