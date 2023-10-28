@@ -4,48 +4,50 @@ date: "2023-10-29T00:01:00.000Z"
 description: When extra work is admissible and how it related with learning
 ---
 
-Every job have times when extra work should be done for success of product, if you not perform it then it performs your superior or colleague. It's bad but could happen when planning was failed.
+Every job has times when extra work is necessary for the success of a project. If you don't undertake it, your supervisor or colleague might have to step in. It's not ideal, but it can happen when planning has failed.
 
-I would like to describe my feelings about it and my thoughts about such cases.
+In this article, I'll share my feelings about extra work and provide insights on when it might be beneficial.
 
-I think extra work hours is normal in 5 cases:
+## 1. Pursuing extra money responsibly 
 
-## 1. You need extra money and you can make it from extra hours
+Sometimes, you need extra money, and earning it through additional hours on your main job can be more convenient. Some companies discourage developers from taking on freelance or project-based work to prevent distraction and burnout. In such cases, extra work on your main job might be the best option. Juggling a part-time job can add more responsibility, potentially leading to frustration and burnout.
 
-Sometimes you just need more money and it's more convenient to earn it on your main job. Some companies don't want developers to have freelance or project-based jobs, because it can scatter attention of developer and make a person tired of work. In worst scenarios it could lead to burnout.
+Tip: Be cautious of taking on too much. Balancing a main job and a part-time job can be overwhelming, leading to burnout.
 
-So in this case extra work on your main job could be the best option for you. If you will have freelance or part time job, it will add more responsibility, and in the end of the day you will have responsibility from main job and from part time job. This could be hard and frustrating and it will be nightmare if you will have more work than you can manage.
+Example from my experience:
 
-My example with that case:
+During my time in college, I took on the challenge of creating three graduate works simultaneously. Although I managed to implement all of them on time, the stress I endured wasn't worth it. There were days when I had to go without sleep, and all the money I earned went towards accommodation expenses, which could have been optimized.
 
-When I was in college, I created 3 graduate works at once. I implemented all of them in time, but stress that I get from it wasn't worth it. I had to spend some days without sleep and I spend all the money I received on accommodation, the costs of which could simply be optimized.
+Working through the night to earn more money is a red flag 🚩
 
-When you don't sleep at night for getting more money is RED FLAG 🚩
+## 2. Investing time in your own project 
 
-## 2. When you create your own project
+If it's your own project, whether you create it for learning or for earnings, it's normal to put in extra effort.
 
-If it's your own project, not important if you create it for learning or for earnings, then it's normal to perform harder for it. 
+Learning from implementing projects is the most effective strategy for me, so time for it could be reallocated from the time you dedicate to learning something else.
 
-Learning from implementing some projects is the best learning strategy for me, so time for it could be redistributed from time that you dedicate to learn something.
+However, if you find yourself working the same amount of time or more at your main job, then you need to address this issue
 
-But if you work more or same amount of time at main job, then you need to think out this problem.
+## 3. Taking responsibility for mistakes 
 
-## 3. When you broke something ❌
+If you've broken something ❌ (hopefully not in production) without team backup, fixing it becomes your responsibility. While it's common to face such challenges, seeking help from a colleague when needed is entirely acceptable.
 
-When you broke something (hopefully not on production) and you don't have backup from your team, then it's your responsibility to fix it ASAP.
+Tip: Proactively seek assistance if a problem is beyond your immediate control.
 
-It's frequently happening with me and I always try to fix such problems. But if you can't manage it and you have colleague that could help, then it's totally normal to get help.
+## 4. Seizing opportunities for success
 
-## 4. When extra work can lead to amazing success
-
-If you feel that your extra work could lead company or you to amazing success, it's bad idea to just go sleep. Sometimes intuition or just logical analyze tells you that 2 more hours of fixing problems could lead to success, if it's your story then just try to get result.
+If your extra work could lead to significant success for you or your company, don't hesitate to put in the effort. Trust your intuition or logical analysis. However, be cautious and prioritize your health. Prolonged periods of excessive work can have adverse effects.
 
 WARNING: It's only my opinion. Consider your actions. If you have problems with health never let it get worth. If you do extra work for more than 2-3 days because of trying get success, then try to replan your day and not sacrifice your health.
 
-## 5. When extra work can help get new experience
+## 5. Gaining new experience through extra work 
 
-Sometimes extra work can give new experience. For example when you can implement new project at work, as part of hackathon or helping the other team in your company.
+Engaging in extra work can offer valuable experiences, such as implementing a new project at work or participating in a hackathon. Collaborating with professionals dedicated to personal growth can enhance your skills in various areas.
 
-If you will work with persons that develop themselves and try to be professional - such extra work could give experience in many areas.
+Tip: Choose opportunities that align with your personal and professional development goals.
+
+## Conclusion
+
+Extra work can be a double-edged sword. While it can lead to success and personal growth, it's crucial to navigate it responsibly to avoid burnout and maintain overall well-being. Consider your actions carefully, prioritize your health, and strive for a balanced approach to work and learning.
 
 ![AI shows IT worker on extra work](./extra_work_1.jpeg)
