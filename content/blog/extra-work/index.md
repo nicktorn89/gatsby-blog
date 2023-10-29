@@ -1,6 +1,6 @@
 ---
 title: Extra work and learning
-date: "2023-10-29T00:01:00.000Z"
+date: "2023-10-29T11:49:00.000Z"
 description: When extra work is admissible and how it related with learning
 ---
 
@@ -49,5 +49,12 @@ Tip: Choose opportunities that align with your personal and professional develop
 ## Conclusion
 
 Extra work can be a double-edged sword. While it can lead to success and personal growth, it's crucial to navigate it responsibly to avoid burnout and maintain overall well-being. Consider your actions carefully, prioritize your health, and strive for a balanced approach to work and learning.
+
+Tips for overcoming difficulties during additional work:
+
+- Sleep as you normally do; never choose work over sleep.
+- Drink water or green tea without sugar; this will help get rid of toxins in the brain.
+- Get some sleep during the day if it's possible.
+- Ask for help if you need it from your colleagues, relatives, or friends.
 
 ![AI shows IT worker on extra work](./extra_work_1.jpeg)
