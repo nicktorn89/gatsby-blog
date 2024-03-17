@@ -27,6 +27,8 @@ module.exports = {
         link: 'https://t.me/rickdeck',
       },
     },
+    keywords: `Komanchy, blog, tech, Команчи, блог`,
+    image: `${__dirname}/src/images/site-preview.png`,
   },
   plugins: [
     `gatsby-plugin-image`,

@@ -16,11 +16,15 @@ const Seo = ({ description, title, children }) => {
           siteMetadata {
             title
             description
+            keywords
           }
         }
       }
     `,
   );
+
+  const keywords = site.siteMetadata?.keywords;
+  const image = site.siteMetadata?.image;
 
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;
@@ -29,9 +33,13 @@ const Seo = ({ description, title, children }) => {
     <>
       <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
       <meta name='description' content={metaDescription} />
+
+      <meta property='keywords' content={keywords} />
       <meta property='og:title' content={title} />
       <meta property='og:description' content={metaDescription} />
       <meta property='og:type' content='website' />
+      <meta property='og:image' content={image} />
+
       {children}
     </>
   );
