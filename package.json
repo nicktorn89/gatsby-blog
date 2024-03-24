@@ -52,5 +52,10 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  }
+  },
+  "engines": {
+    "node": "18.19.0",
+    "yarn": "4.1.1"
+  },
+  "packageManager": "yarn@4.1.1"
 }
