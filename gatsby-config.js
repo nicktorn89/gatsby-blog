@@ -31,6 +31,19 @@ module.exports = {
     image: `${__dirname}/src/images/site-preview.png`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-posthog`,
+      options: {
+        // Specify the API key for your PostHog Project (required)
+        apiKey: 'phc_5A8CndxycWzCASoEzZs8zDtu94S9Cv9LwyGKqTAMOKV',
+        // Specify the app host if self-hosting (optional, default: https://app.posthog.com)
+        apiHost: 'https://eu.posthog.com',
+        // Puts tracking script in the head instead of the body (optional, default: true)
+        head: true,
+        // Enable posthog analytics tracking during development (optional, default: false)
+        isEnabledDevMode: true,
+      },
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
