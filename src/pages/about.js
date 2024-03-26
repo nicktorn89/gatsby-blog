@@ -3,6 +3,7 @@ import Bio from '../components/Bio/Bio';
 import Layout from '../components/Layout/Layout';
 import { graphql } from 'gatsby';
 import Seo from '../components/Seo/Seo';
+import { AboutDesc } from '../components/AboutDesc/AboutDesc';
 
 const About = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
@@ -10,6 +11,8 @@ const About = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Bio location={location} />
+
+      <AboutDesc />
     </Layout>
   );
 };
