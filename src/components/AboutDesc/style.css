@@ -11,6 +11,9 @@
   border-radius: 10px;
 }
 
-.about-description-with-photo p {
+.about-description-text {
   width: 70%;
+
+  display: flex;
+  flex-direction: column;
 }
