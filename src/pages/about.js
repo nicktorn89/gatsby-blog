@@ -4,6 +4,7 @@ import Layout from '../components/Layout/Layout';
 import { graphql } from 'gatsby';
 import Seo from '../components/Seo/Seo';
 import { AboutDesc } from '../components/AboutDesc/AboutDesc';
+import { LinksBlock } from '../components/LinksBlock/LinksBlock';
 
 const About = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
@@ -13,6 +14,8 @@ const About = ({ data, location }) => {
       <Bio location={location} />
 
       <AboutDesc />
+
+      <LinksBlock />
     </Layout>
   );
 };
