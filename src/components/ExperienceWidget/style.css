@@ -1,0 +1,28 @@
+.experience-widget-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.workplace-item {
+  display: flex;
+}
+
+.workplace-dates {
+  flex-basis: 220px;
+
+  flex-grow: 0;
+
+  display: flex;
+}
+
+.workplace-dates-text {
+  flex-grow: 1;
+}
+
+.workplaces-line {
+  background: red;
+  flex-basis: 8px;
+
+  flex-shrink: 0;
+  flex-grow: 0;
+}
