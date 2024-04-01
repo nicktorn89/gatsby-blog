@@ -11,18 +11,50 @@
   flex-basis: 220px;
 
   flex-grow: 0;
+  flex-shrink: 0;
 
   display: flex;
 }
 
 .workplace-dates-text {
   flex-grow: 1;
+  padding-right: 8px;
 }
 
 .workplaces-line {
-  background: red;
-  flex-basis: 8px;
-
+  background: var(--color-primary);
+  width: var(--widget-line-width);
   flex-shrink: 0;
   flex-grow: 0;
+  overflow: visible;
+  box-sizing: content-box;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.workplaces-line::after {
+  content: '';
+
+  min-width: 16px;
+  height: var(--widget-line-width);
+
+  display: block;
+  background: var(--color-primary);
+
+  position: relative;
+  top: 25px;
+}
+
+.workplace-description {
+  padding-left: 16px;
+}
+
+.workplace-description > h4, h5 {
+  margin: 0 0 8px 0;
+}
+
+.workplace-description > .workplace-position-name {
+  margin-top: 8px;
 }
