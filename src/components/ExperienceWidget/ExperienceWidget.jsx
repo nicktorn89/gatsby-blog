@@ -7,6 +7,8 @@ import './style.css';
 import { WorkDescription } from './WorkDescription/WorkDescription';
 
 export const ExperienceWidget = () => {
+  // TODO: Count total
+  // const totalExperience = 
   return (
     <div className='experience-widget-container'>
       {experienceData.map(
@@ -19,17 +21,28 @@ export const ExperienceWidget = () => {
           workplaceLink,
           positionName,
         }) => {
-          const startDateFormatted = new DateTime(startDate).toLocaleString(DateTime.DATE_FULL);
-          const endDateFormatted = new DateTime(
-            endDate || new Date(),
-          ).toLocaleString(DateTime.DATE_FULL);
+          const start = new Date(startDate);
+          const end = endDate ? new Date(endDate) : new Date();
+
+          const startDt = DateTime.fromJSDate(start);
+          const endDt = DateTime.fromJSDate(end);
+
+          const startDateFormatted = startDt.toLocaleString(DateTime.DATE_FULL);
+          const endDateFormatted = endDt.toLocaleString(DateTime.DATE_FULL);
+
+          const { years, months } = endDt.diff(startDt, ['years', 'months']).toObject();
 
           return (
             <div key={id} id={id} className='workplace-item'>
               <div className='workplace-dates'>
                 <p className='workplace-dates-text'>
-                  {startDateFormatted} -
+                  {startDateFormatted} -{' '}
                   {endDate ? endDateFormatted : 'Currently'}
+
+                  <br />
+
+                  {years >= 1 && `${Math.ceil(years)} years `}
+                  {months && `${Math.ceil(months)} months`}
                 </p>
 
                 <div className='workplaces-line' />
