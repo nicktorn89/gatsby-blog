@@ -46,6 +46,8 @@ export const ExperienceWidget = () => {
       .toObject();
   }, [datesInDateTimeFormat]);
 
+  console.log('timeDifferences', timeDifferences)
+
   return (
     <>
       <h3 className='total-experience'>
@@ -83,7 +85,7 @@ export const ExperienceWidget = () => {
                     {endDate ? endDateFormatted : 'Currently'}
                     <br />
                     {years >= 1 && `${Math.ceil(years)} years `}
-                    {months && `${Math.ceil(months)} months`}
+                    {months && `${Math.round(months)} months`}
                   </p>
 
                   <div className='workplaces-line' />
