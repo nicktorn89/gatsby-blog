@@ -7,6 +7,7 @@ import Seo from '../components/Seo/Seo';
 import { AboutDesc } from '../components/AboutDesc/AboutDesc';
 import { LinksBlock } from '../components/LinksBlock/LinksBlock';
 import { ExperienceWidget } from '../components/ExperienceWidget/ExperienceWidget';
+import { SkillsWidget } from '../components/SkillsWidget/SkillsWidget';
 
 const About = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`;
@@ -20,6 +21,8 @@ const About = ({ data, location }) => {
       <LinksBlock />
 
       <ExperienceWidget />
+
+      <SkillsWidget />
     </Layout>
   );
 };
