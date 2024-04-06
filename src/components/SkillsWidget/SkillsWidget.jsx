@@ -18,15 +18,23 @@ ChartJS.register(
   LineElement,
   Filler,
   Tooltip,
-  Legend
+  Legend,
 );
 
 export const data = {
-  labels: ['Thing 1', 'Thing 2', 'Thing 3', 'Thing 4', 'Thing 5', 'Thing 6'],
+  labels: [
+    'JS/TS',
+    'React',
+    'Node.js',
+    'Linux',
+    'Software Architecture',
+    'Computer Science',
+  ],
   datasets: [
     {
-      label: '# of Votes',
-      data: [2, 9, 3, 5, 2, 3],
+      label: 'Skill from 1 to 10',
+      data: [9, 9, 7, 4, 6, 5],
+
       backgroundColor: 'rgba(255, 99, 132, 0.2)',
       borderColor: 'rgba(255, 99, 132, 1)',
       borderWidth: 1,
@@ -39,7 +47,17 @@ export const SkillsWidget = () => {
     <div className='skills-widget'>
       <h3 className='skills-title'>My skills</h3>
 
-      <Radar data={data} />;
+      <Radar
+        data={data}
+        options={{
+          scales: {
+            r: {
+              suggestedMin: 0,
+              suggestedMax: 10,
+            },
+          },
+        }}
+      />
     </div>
   );
 };
