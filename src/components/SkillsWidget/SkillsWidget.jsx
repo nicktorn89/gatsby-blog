@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './style.css';
 
 import {
@@ -42,22 +43,26 @@ export const data = {
   ],
 };
 
-export const SkillsWidget = () => {
-  return (
-    <div className='skills-widget'>
-      <h3 className='skills-title'>My skills</h3>
+export const SkillsWidget = () => (
+  <div className='skills-widget'>
+    <h3 className='skills-title'>My skills</h3>
 
-      <Radar
-        data={data}
-        options={{
-          scales: {
-            r: {
-              suggestedMin: 0,
-              suggestedMax: 10,
-            },
+    <Radar
+      data={data}
+      options={{
+        elements: {
+          line: {
+            borderColor: 'white',
           },
-        }}
-      />
-    </div>
-  );
-};
+        },
+        scales: {
+          r: {
+            suggestedMin: 0,
+            suggestedMax: 10,
+            backgroundColor: 'white',
+          },
+        },
+      }}
+    />
+  </div>
+);
