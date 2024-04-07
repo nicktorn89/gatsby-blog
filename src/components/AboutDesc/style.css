@@ -1,0 +1,19 @@
+.about-description-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-description-with-photo {
+  display: flex;
+}
+
+.about-description-with-photo .bio-avatar {
+  border-radius: 10px;
+}
+
+.about-description-text {
+  width: 70%;
+
+  display: flex;
+  flex-direction: column;
+}

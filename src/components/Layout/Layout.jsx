@@ -28,10 +28,13 @@ const Layout = ({ location, title, children }) => {
   const telegramLink = data.site.siteMetadata?.social.telegram.link;
 
   const rootPath = `${__PATH_PREFIX__}/`;
+
   const isRootPath = location.pathname === rootPath;
+  const isAboutPath = location.pathname === `${__PATH_PREFIX__}/about/`;
+
   let header;
 
-  if (isRootPath) {
+  if (isRootPath || isAboutPath) {
     header = (
       <h1 className='main-heading'>
         <Link to='/'>{title}</Link>

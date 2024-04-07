@@ -9,7 +9,7 @@ import * as React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
-const Bio = () => {
+const Bio = ({ location }) => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       site {
@@ -22,6 +22,8 @@ const Bio = () => {
       }
     }
   `);
+
+  const rootPath = `${__PATH_PREFIX__}/`;
 
   const author = data.site.siteMetadata?.author;
 
@@ -37,12 +39,21 @@ const Bio = () => {
         quality={95}
         alt='Profile picture'
       />
+
       {author?.name && (
         <div className='bio-text'>
           <p>
             Written by <strong>{author.name}</strong>
           </p>
-          <p>{author?.summary || null}</p>
+          <p>
+            {author?.summary || null}
+            &nbsp; &mdash; &nbsp;
+            {location.pathname === rootPath ? (
+              <a href='/about'>About me</a>
+            ) : (
+              <a href={rootPath}>Posts</a>
+            )}
+          </p>
         </div>
       )}
     </div>

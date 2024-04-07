@@ -1,0 +1,43 @@
+[
+  {
+    "id": 0,
+    "startDate": "09/01/2019",
+    "workplace": "Actonic GmbH",
+    "workplaceLink": "https://actonic.de",
+    "positionName": "Software Developer",
+    "workDescription": [
+      "Addons development for Jira and Confluence."
+    ]
+  },
+  {
+    "id": 1,
+    "startDate": "02/01/2019",
+    "endDate": "09/01/2019",
+    "workplace": "ИП Пахомов Антон Юрьевич",
+    "positionName": "Front-end developer",
+    "workDescription": [
+      "Development of calculation apps for building companies/building shops.",
+      "Implementing features and support SaaS app for building companies/building shops."
+    ]
+  },
+  {
+    "id": 2,
+    "startDate": "12/01/2018",
+    "endDate": "01/31/2019",
+    "workplace": "Открытые решения",
+    "positionName": "Front-end developer",
+    "workDescription": [
+      "Development websites with React and Express."
+    ]
+  },
+  {
+    "id": 3,
+    "startDate": "07/01/2018",
+    "endDate": "11/30/2018",
+    "workplace": "MyBiz",
+    "positionName": "Front-end developer",
+    "workDescription": [
+      "Implementing front-end for document management system."
+    ]
+  }
+]

@@ -1,0 +1,5 @@
+.links-block {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 0 64px 0;
+}
