@@ -5,6 +5,7 @@ import Bio from '../components/Bio/Bio';
 import Layout from '../components/Layout/Layout';
 import Seo from '../components/Seo/Seo';
 import { ReadTime } from '../components/ReadTime/ReadTime';
+import { ContentList } from '../components/ContentList/ContentList';
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
@@ -25,6 +26,8 @@ const BlogPostTemplate = ({
         </header>
 
         <ReadTime postHtml={post.html} />
+
+        <ContentList postHtml={post.html} />
 
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
