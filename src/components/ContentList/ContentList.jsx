@@ -1,41 +1,57 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { forwardRef, useEffect, useMemo, useState } from 'react';
 
-export const ContentList = ({ postHtml }) => {
+// eslint-disable-next-line react/display-name
+export const ContentList = forwardRef((props, postElementRef) => {
   const [allTitles, setAllTitles] = useState(null);
-
-  const postElementRef = useRef();
-
-  console.log('allTitles', allTitles);
 
   useEffect(() => {
     if (postElementRef.current) {
-      console.log('found element', postElementRef.current);
-
       const titlesTags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
 
       const allTitles = titlesTags.reduce((acc, titleTag) => {
-        if (acc[titleTag]) {
-          acc[titleTag].push(...postElementRef.current.querySelectorAll(titleTag));
-        } else {
-          acc[titleTag] = Array.from(postElementRef.current.querySelectorAll(titleTag));
-        }
+        acc.push(...postElementRef.current.querySelectorAll(titleTag));
 
         return acc;
-      }, {});
+      }, []);
 
       setAllTitles(allTitles);
     }
   }, [postElementRef.current]);
 
-  return (
-    <div className='content-list'>
-      <div
-        style={{ display: 'none' }}
-        dangerouslySetInnerHTML={{ __html: postHtml }}
-        ref={postElementRef}
-      ></div>
+  const titlesMap = useMemo(() => {
+    if (!allTitles) return null;
 
-      {allTitles && <div>All titles</div>}
-    </div>
+    const allTitlesWithPosition = allTitles.map((title) => ({
+      title,
+      titleOrder: title.nodeName.replace('H', ''),
+      position: title.getBoundingClientRect().y,
+    }));
+
+    allTitlesWithPosition.sort((a, b) => a.position - b.position);
+
+    return allTitlesWithPosition;
+  }, [allTitles]);
+
+  console.log('titlesMap', titlesMap);
+
+  return (
+    allTitles &&
+    titlesMap && (
+      <div className='content-list-container'>
+        <span>Content list</span>
+
+        <ul className='content-list'>
+          {titlesMap.map(({ title, titleOrder, position }) => (
+            <li
+              className='content-list-item'
+              key={position}
+              style={{ marginLeft: 8 * titleOrder }}
+            >
+              <a href='#'>{title.innerText}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )
   );
-};
+});

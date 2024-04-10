@@ -13,6 +13,8 @@ const BlogPostTemplate = ({
 }) => {
   const siteTitle = site.siteMetadata?.title || `Title`;
 
+  const postElementRef = React.useRef();
+
   return (
     <Layout location={location} title={siteTitle}>
       <article
@@ -27,11 +29,12 @@ const BlogPostTemplate = ({
 
         <ReadTime postHtml={post.html} />
 
-        <ContentList postHtml={post.html} />
+        <ContentList postHtml={post.html} ref={postElementRef} />
 
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp='articleBody'
+          ref={postElementRef}
         />
 
         <hr />
