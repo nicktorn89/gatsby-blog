@@ -21,11 +21,16 @@ export const ContentList = forwardRef((props, postElementRef) => {
   const titlesMap = useMemo(() => {
     if (!allTitles) return null;
 
-    const allTitlesWithPosition = allTitles.map((title) => ({
+    const allTitlesWithPosition = allTitles.map((title, index) => ({
       title,
       titleOrder: title.nodeName.replace('H', ''),
       position: title.getBoundingClientRect().y,
+      id: `title-${index}`,
     }));
+
+    allTitlesWithPosition.forEach(({ title, id }) => {
+      title.id = id;
+    });
 
     allTitlesWithPosition.sort((a, b) => a.position - b.position);
 
@@ -41,13 +46,13 @@ export const ContentList = forwardRef((props, postElementRef) => {
         <span>Content list</span>
 
         <ul className='content-list'>
-          {titlesMap.map(({ title, titleOrder, position }) => (
+          {titlesMap.map(({ title, titleOrder, position, id }) => (
             <li
               className='content-list-item'
               key={position}
               style={{ marginLeft: 8 * titleOrder }}
             >
-              <a href='#'>{title.innerText}</a>
+              <a href={`#${id}`}>{title.innerText}</a>
             </li>
           ))}
         </ul>
