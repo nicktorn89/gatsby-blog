@@ -1,0 +1,12 @@
+.content-list {
+  margin: 8px 0 16px 0;
+}
+
+.content-list-item {
+  font-size: 12px;
+  margin: 0 0 0 8px;
+}
+
+.content-list-container span {
+  font-size: 14px;
+}

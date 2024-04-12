@@ -1,4 +1,5 @@
 import React, { forwardRef, useEffect, useMemo, useState } from 'react';
+import './style.css';
 
 // eslint-disable-next-line react/display-name
 export const ContentList = forwardRef((props, postElementRef) => {
@@ -37,13 +38,12 @@ export const ContentList = forwardRef((props, postElementRef) => {
     return allTitlesWithPosition;
   }, [allTitles]);
 
-  console.log('titlesMap', titlesMap);
-
   return (
     allTitles &&
-    titlesMap && (
+    titlesMap &&
+    titlesMap.length > 0 && (
       <div className='content-list-container'>
-        <span>Content list</span>
+        <span>Content:</span>
 
         <ul className='content-list'>
           {titlesMap.map(({ title, titleOrder, position, id }) => (
