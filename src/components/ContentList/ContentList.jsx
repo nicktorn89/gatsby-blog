@@ -22,11 +22,11 @@ export const ContentList = forwardRef((props, postElementRef) => {
   const titlesMap = useMemo(() => {
     if (!allTitles) return null;
 
-    const allTitlesWithPosition = allTitles.map((title, index) => ({
+    const allTitlesWithPosition = allTitles.map((title) => ({
       title,
       titleOrder: title.nodeName.replace('H', ''),
       position: title.getBoundingClientRect().y,
-      id: `title-${index}`,
+      id: `${title.innerText.replaceAll(' ', '-')}`,
     }));
 
     allTitlesWithPosition.forEach(({ title, id }) => {
